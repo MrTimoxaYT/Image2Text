@@ -11,7 +11,7 @@ def text_transcribe(path, lang):
 
     return text
 
-# checking a word if it is in the same line as the previous one
+# the accuracy of checking a word whether it is in the same line as the previous one
 def in_range_checker(list_to_avg, next_height=0,paragrafs_accuracy=20):
     avg = 0
     for item in list_to_avg[0]:

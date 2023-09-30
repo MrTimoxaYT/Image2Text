@@ -34,7 +34,7 @@ if __name__ == '__main__':
                 img = gr.Image(label='Image input', info='Full path to a local file. For file upload, click the button below.', type='filepath',height=640)
                 
                 with gr.Row():
-                    accuracy = gr.Slider(minimum=5, maximum=50,value=20,step=5, label='Paragrafs accuracy (default 20)',interactive=True)            
+                    accuracy = gr.Slider(minimum=5, maximum=50,value=20,step=5, label='Paragrafs accuracy (default 20)',interactive=True, info='The accuracy of checking a word whether it is in the same line as the previous one')            
                     lang_radio_btn = gr.Radio(choices=['English','Russian','German','French','Japanese','Korean'],value='English',label='What language of text in picture?')  
                 
                 save_in_file_status = gr.Checkbox(value=False, label='Save result?')                     
