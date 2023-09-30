@@ -15,7 +15,7 @@ langs = {
 def transcribe_webui_func(lang='English',filepath='',save_in_file=False):
     extract_lang = langs[lang]
     extracted_text = main(lang=extract_lang,filepath=filepath,save_in_file=save_in_file)
-    return gr.update(value=extracted_text.strip('\n'))
+    return gr.Textbox(value=extracted_text.strip('\n'))
     
 
 if __name__ == '__main__':
@@ -41,7 +41,7 @@ if __name__ == '__main__':
                 transcribe_btn = gr.Button('Extract text from image', variant='primary')
                 
             with gr.Column():
-                text_output = gr.Text(label='Text from image',info='All extracted text of images in "output" folder when u save it in file')
+                text_output = gr.Textbox(label='Text from image',info='All extracted text of images in "output" folder when u save it in file')
 
         # button processing section
         transcribe_btn.click(transcribe_webui_func,inputs=[lang_radio_btn,img,save_in_file_status],outputs=text_output)
