@@ -29,12 +29,9 @@ if __name__ == '__main__':
     with gr.Blocks(title='Image2Text') as img2txt_app:
 
         with gr.Row():
-            # image_input = gr.Text(label='Image input', info='Full path to a local file. For file upload, click the button below.')
             with gr.Column():
                
-                
                 img = gr.Image(label='Image input', info='Full path to a local file. For file upload, click the button below.', type='filepath',height=640)
-                # img.upload(process_file_upload, inputs=img, outputs=img)
                 
                 with gr.Row():
                     accuracy = gr.Slider(minimum=5, maximum=50,value=20,step=5, label='Paragrafs accuracy (default 20)',interactive=True)            
@@ -43,17 +40,12 @@ if __name__ == '__main__':
                 save_in_file_status = gr.Checkbox(value=False, label='Save result?')                     
                 transcribe_btn = gr.Button('Extract text from image', variant='primary')
                 
-
-
             with gr.Column():
                 text_output = gr.Text(label='Text from image',info='All extracted text of images in "output" folder when u save it in file')
-
 
         # button processing section
         transcribe_btn.click(transcribe_webui_func,inputs=[lang_radio_btn,img,save_in_file_status],outputs=text_output)
             
-            
-
         img2txt_app.launch(
         share=args.share_enabled,
         enable_queue=True,
