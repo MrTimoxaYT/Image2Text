@@ -38,7 +38,7 @@ pip install -r requirements.txt
 To run the Image2Text WebUI, run the following command.
 
 ```
-python src/webui.py
+python src/webui_app.py
 ```
 
 | Flag                                       | Description |
