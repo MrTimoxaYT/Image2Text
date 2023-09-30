@@ -5,7 +5,7 @@ Image2Text is a program for recognizing text from images, which has a CLI and a 
 ![image](webui_preview.png?raw=true&width)
 
 
-## Update AICoverGen to latest version
+## Update Image2Text to latest version
 
 Install and pull any new requirements and changes by opening a command line window in the `Image2Text` directory and running the following commands.
 
