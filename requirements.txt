@@ -1,0 +1,2 @@
+gradio==3.45.2
+easyocr==1.7.1
