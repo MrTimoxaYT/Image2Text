@@ -2,7 +2,7 @@
 Image2Text is a program for recognizing text from images, which has a CLI and a WebUI 
 
 ### WebUI preview
-![image](webui_preview.png?raw=true&width)
+![image](webui_preview.png?raw=true)
 
 
 ## Update Image2Text to latest version
