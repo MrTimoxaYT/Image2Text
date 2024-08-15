@@ -1,2 +1,2 @@
-gradio==4.19.2
+gradio==4.37.1
 easyocr==1.7.1
